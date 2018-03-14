@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>howFast – A tiny smart library that detects how fast you are typing</title>
+  <link rel="stylesheet" href="css/prism.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header class="c-header u-text-center">
+    <h1 class="u-weight-400">howfast<span class="c-cursor"></span></h1>
+    <p class="c-subtitle">A lightweight library that saves you money, from sloooow users.</p>
+  </header>
+
+  <section class="c-content">
+
+      <div class="u-relative">
+        <input type="text" class="c-search-input js-search" placeholder="Type a location" />
+        <span class="js-spinner spinner"></span>
+      </div>
+      <div class="u-relative" style="min-height: 155px;">
+        <ul class="c-search-results js-search-results c-panel">
+          <li>Search results</li>
+          <li><span class="c-result-holder  js-result-holder u-weight-bold"></span></li>
+          <li><span class="c-result-holder  js-result-holder u-weight-bold"></span>, UK</li>
+        </ul>
+      </div>
+      
+      <div class="c-panel c-panel--md u-mb-x8">
+        <h2 class="o-type-16 u-weight-400 u-mb">Time between keystroke:</h2>
+        <input type="text" class="js-inbetween-time u-mb-x4" readonly />
+      
+        <h2 class="o-type-16 u-weight-400 u-mb">Keys pressed:</h2>
+        <input type="text" class="js-total-keys u-mb-x4" readonly />
+      
+        <h2 class="o-type-16 u-weight-400 u-mb">Average typing time:</h2>
+        <input type="text" class="js-average-time c-input--special" readonly />
+      </div>
+      
+      <h2 class="u-mb-x4">The story</h2>
+      <div class="c-panel c-panel--md u-mb-x8">
+        <p class="u-mb-x8">Sometimes you need to make a request to a premium third-party API, after a user input. Usually you fire the request on <code>keyup</code>.
+          But each request costs 💵 💵 💵 and not every user is typing at the same speed.<br/><br/><strong>Slow users cost you more money.</strong>
+          <br/>Because you are firing more and more requests while they are typing sloooooooooowly.
+        </p>
+
+        <h3 class="u-mb-x2">But what if...</h3>
+        <p class="u-mb-x8">
+          We could learn how fast each user is typing and fire tailor made requests.
+        </p>
+
+        <h3 class="u-mb-x2">The solution</h3>
+        <p class="">
+          Howfast.js tracks every user keystroke and saves it localStorage.
+          Then it calculates the last <code>100</code> tracked keystrokes and determines the average typing duration per user.
+        </p>
+      </div>
+
+      <h2 class="u-mb-x4">Usage</h2>
+      <div class="c-panel c-panel--md">
+        <h3 class="u-mb-x2">Installation</h3>
+        <p class="u-mb">
+          Include howfast in your code:
+        </p>
+
+        <div class="u-mb-x8">
+            <pre type="text" class="js-code" data-src="/includes/include.html"></pre>
+        </div>
+
+        <h3 class="u-mb-x2">Setup</h3>
+        <p class="u-mb">
+          Initialize a howfast instance (3 different ways)
+        </p>
+  
+        <div class="u-mb-x8">
+          <pre class="js-code" data-src="/includes/init.js"></pre>
+        </div>
+
+        <h3 class="u-mb-x2">Use it in your app</h3>
+        <p class="u-mb">
+          Now you that you have a public howFast object, you can access the typing speed view <code>hf.speed</code>.
+        </p>
+        
+        <div class="u-mb-x8">
+          <pre class="js-code" data-src="/includes/app.js"></pre>
+        </div>
+
+        <h3 class="u-mb-x2">The how fast object</h3>
+        <p class="u-mb">
+          By calling this:
+        </p>
+        <div class="u-mb-x4">
+          <pre class="js-code" data-src="/includes/log.js"></pre>
+        </div>
+
+        <p class="u-mb">
+          You get this:
+        </p>
+        <div class="u-mb-x8">
+          <pre class="js-code" data-src="/includes/object.js"></pre>
+        </div>
+
+        <h3 class="u-mb-x2">Options</h3>
+        <p class="u-mb">
+          Below you can see all the available options with their default values
+        </p>
+        <div class="u-mb-x4">
+          <pre class="js-code" data-src="/includes/options.js"></pre>
+        </div>
+        <h3 class="u-mb-x2">Enjoy!</h3>
+      </div>
+      <div class="u-text-center c-panel--md">
+        A project created by <a class="c-link" href="http://www.andrewckor.com">andrewckor</a>
+      </div>
+  </section>
+
+
+
+  <script type="text/javascript" src="js/hf.js"></script>
+  <script type="text/javascript" src="js/prism.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,281 @@
+/* Base */
+
+html {
+      
+}
+
+body {
+  padding: 20px;
+  margin: 0;
+  color: white;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  background: #673ab7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #673ab7, #512da8); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #673ab7, #512da8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+/* Utilities and type */
+
+h1,h2,h3,h4,h5,h6, p {
+    margin: 0;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+}
+
+h1 {
+    font-size: 42px;
+    margin: 0;
+}
+
+h1 .c-cursor {
+    width: 3px;
+    height: 45px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-top: -5px; 
+    background-color: white;
+    opacity: 0.5;
+}
+
+.u-mb {
+    margin-bottom: 5px !important;
+}
+
+.u-mb-x2 {
+    margin-bottom: 10px !important;
+}
+
+.u-mb-x4 {
+    margin-bottom: 20px !important;
+}
+
+.u-mb-x8 {
+    margin-bottom: 40px !important;
+}
+
+.u-relative {
+    position: relative;
+}
+
+.u-weight-400 {
+  font-weight: 400;
+}
+
+.u-weight-bold {
+    font-weight: bold;
+}
+
+.u-weight-300 {
+  font-weight: 300;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-block {
+    display: block;
+}
+
+.o-type-16 {
+  font-size: 16px;
+}
+
+.o-type-22 {
+  font-size: 22px;
+}
+
+code, pre {
+    background: #f9f9f9;
+    border: 1px solid rgba(0,0,0,.2);
+    color: #ff6517;
+    font-size: 14px;
+    display: inline-block;
+    padding: 0 3px;
+    border-radius: 3px;
+    box-shadow:inset 0 1px 0 white, 0 1px 4px rgba(0,0,0,.1);
+}
+
+code.u-block,
+pre.u-block {
+    display: block;
+    padding: 10px 15px;
+    box-shadow: none;
+    background-color: rgba(0,0,0,0.05);
+    border: none;
+    overflow: auto;
+}
+
+
+
+/* Form inputs */
+
+input {
+  background-color: rgba(0,0,0,.1);
+  color: black;
+  font-size: 18px;
+  padding: 0.6em 0.9em;
+  border-radius: 3px;
+  border: none !important;
+}
+
+input::-webkit-input-placeholder {
+  color           : rgba(255,255,255,.3);
+}
+
+input:-moz-placeholder {
+  color           : rgba(255,255,255,.3);
+}
+
+input::-moz-placeholder {
+  color           : rgba(255,255,255,.3);
+}
+
+input:-ms-input-placeholder {
+  color           : rgba(255,255,255,.3);
+}
+
+
+
+/* Components */
+
+.c-content  {
+    max-width: 800px;
+    margin: auto;
+}
+
+.c-header {
+    padding: 8% 0;
+}
+
+.c-subtitle {
+    margin: 15px 0;
+    font-size: 20px;
+}
+
+.c-link {
+    color: #fdb62e;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.c-search-input {
+    width: 100%;
+    color: white;
+    background-color: rgba(0,0,0,.2);
+    height: auto;
+    padding: 1em 1.2em;
+}  
+
+.c-panel {
+    margin: 0;
+    padding: 20px 30px;
+    color: #504b4b;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 1px 10px rgba(0,0,0,.1);
+}
+
+.c-panel--md {
+    padding: 30px;
+}
+
+.c-search-results {
+    display: none;
+    list-style: none;
+    margin-top: 10px;
+}
+
+.c-search-results li {
+    color: #a790d8;
+    padding: 4px 0;
+}
+
+.c-search-results li:first-child {
+    margin-bottom: 15px;
+    color: black;
+    opacity: 0.65;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.c-result-holder {
+    color: #653FB4;
+}
+
+.c-input--special {
+    color: white;
+    text-shadow: 0 1px 1px rgba(0,0,0,.1);
+    background-color: #fdb62e;
+}
+
+
+
+/* Loader */
+
+.spinner {
+    display: none;
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(255,255,255, 0.03);
+    border-top: 3px solid rgba(255,255,255,.55);
+    border-radius: 30px;
+    margin: 10px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    -webkit-animation: spin 0.65s infinite linear;
+    -moz-animation: spin 0.65s infinite linear;
+    -o-animation: spin 0.65s infinite linear;
+    animation: spin 0.65s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+@-moz-keyframes spin {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+
+    to {
+        -moz-transform: rotate(359deg);
+    }
+}
+
+@-o-keyframes spin {
+    from {
+        -o-transform: rotate(0deg);
+    }
+
+    to {
+        -o-transform: rotate(359deg);
+    }
+}
