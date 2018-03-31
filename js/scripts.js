@@ -6,10 +6,22 @@ var requestTimer        =  null,
     timerDuration       =  hf.speed,
     searchInput         =  document.querySelector('.js-search'),
     searchResults       =  document.querySelector('.js-search-results'),
-    spinner             =  document.querySelector('.js-spinner');
+    spinner             =  document.querySelector('.js-spinner'),
+    previousTotal       =  hf.total || 0;
 
 searchInput.addEventListener('keyup', function(e){
   clearTimeout(requestTimer);
+
+  // Update total key presses
+  document.querySelector('.js-total-keys').value = hf.times;
+
+  // Update elapsed time
+  previousTotal = hf.total > 0 ? previousTotal : hf.speed;
+  document.querySelector('.js-inbetween-time').value = hf.total - previousTotal;
+  previousTotal = hf.total;
+
+  // Typing speed
+  document.querySelector('.js-average-time').value = hf.speed;
 
   // Show hide results menu
   requestTimer = setTimeout(function(){

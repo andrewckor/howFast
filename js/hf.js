@@ -41,7 +41,7 @@ howFast = function (selector, options) {
       }
 
       // Get Settings on startup
-      settings = methods.getSettings();
+      var settings = methods.getSettings();
       
       // Update public settings
       methods.settings = settings;
@@ -90,9 +90,6 @@ howFast = function (selector, options) {
                   // Update total key presses
                   settings.times++
   
-                  // DELETE: Update total key presses
-                  document.querySelector('.js-total-keys').value = settings.times;
-  
                   if (prevTime == 0) {
                     // Calculate elapsed time
                     elapsedTime = o.defaultDuration
@@ -107,9 +104,6 @@ howFast = function (selector, options) {
                   } else if (elapsedTime > o.maxDuration) {
                     elapsedTime =  o.maxDuration
                   }
-                  
-                  // DELETE: Update elapsed time
-                  document.querySelector('.js-inbetween-time').value = elapsedTime;
 
                   // Update elapsed time
                   prevTime = currentTime;
@@ -119,9 +113,6 @@ howFast = function (selector, options) {
   
                   // Update average time
                   settings.speed = timeRounding(parseInt(settings.total/settings.times));
-                  
-                  // DELETE:
-                  document.querySelector('.js-average-time').value = settings.speed;
   
                   // Reset counters if needed
                   if (settings.times >= o.resetAfter) {
